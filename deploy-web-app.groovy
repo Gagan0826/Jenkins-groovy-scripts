@@ -1,6 +1,11 @@
 pipeline{
     agent any
     stages{
+        stage("checkout git repo"){
+            steps{
+                checkout scmGit(branches: [[name: '*/main']], extensions: [], userRemoteConfigs: [[credentialsId: 'jenkins-github', url: 'https://github.com/Gagan0826/web-app.git']])
+            }
+        }
         stage("clone web-app from git"){
             steps{
                 git branch: 'main', credentialsId: 'jenkins-github', url: 'https://github.com/Gagan0826/web-app.git'
