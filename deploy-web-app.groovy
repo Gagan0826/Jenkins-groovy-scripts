@@ -32,7 +32,7 @@ pipeline {
                             transfers: [
                                 sshTransfer(
                                     execCommand: '''
-                                        docker pull 663839140840.dkr.ecr.ap-south-1.amazonaws.com/python-web-app:latest
+                                        docker pull 663839140840.dkr.ecr.ap-south-1.amazonaws.com/python-web-app:v5
                                         '''
                                     )
                                 ]
