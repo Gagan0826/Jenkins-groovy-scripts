@@ -53,7 +53,7 @@ pipeline {
                             transfers: [
                                 sshTransfer(
                                     execCommand: '''
-                                        docker run -d -p 80:80 663839140840.dkr.ecr.ap-south-1.amazonaws.com/python-web-app:v2
+                                        docker run -d -p 80:80 663839140840.dkr.ecr.ap-south-1.amazonaws.com/python-web-app:v5
                                         '''
                                     )
                                 ]
