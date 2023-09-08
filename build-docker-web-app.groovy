@@ -26,12 +26,12 @@ pipeline{
          
         stage("tag image"){
             steps{
-                sh "docker tag web-app-image:latest 663839140840.dkr.ecr.ap-south-1.amazonaws.com/python-web-app:''v\$(expr \${BUILD_NUMBER} - 6)''"
+                sh "docker tag web-app-image:latest 663839140840.dkr.ecr.ap-south-1.amazonaws.com/python-web-app:''v\$(expr \${BUILD_NUMBER} - 8)''"
             }
         }
         stage("push to ecr"){
             steps{
-                sh "docker push 663839140840.dkr.ecr.ap-south-1.amazonaws.com/python-web-app:''v\$(expr \${BUILD_NUMBER} - 6)''"
+                sh "docker push 663839140840.dkr.ecr.ap-south-1.amazonaws.com/python-web-app:''v\$(expr \${BUILD_NUMBER} - 8)''"
             }
         }
     }
