@@ -13,7 +13,7 @@ pipeline{
         }
         stage("ansible"){
             steps{
-                ansiblePlaybook credentialsId: 'w1-key-file', disableHostKeyChecking: true, installation: 'Ansible', inventory: '/var/lib/jenkins/workspace/ansible-config/inventory', playbook: '/var/lib/jenkins/workspace/ansible-config/main.yml'
+                ansiblePlaybook credentialsId: 'ssh-key', disableHostKeyChecking: true, installation: 'Ansible', inventory: '/var/lib/jenkins/workspace/ansible-config/inventory', playbook: '/var/lib/jenkins/workspace/ansible-config/main.yml'
             }
         }
     }
