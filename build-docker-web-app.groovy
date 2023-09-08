@@ -26,7 +26,7 @@ pipeline{
          
         stage("tag image"){
             steps{
-                sh "docker tag web-app-image:latest 663839140840.dkr.ecr.ap-south-1.amazonaws.com/python-web-app:''v\$(expr \${BUILD_NUMBER} - 41)''"
+                sh "docker tag web-app-image:latest 663839140840.dkr.ecr.ap-south-1.amazonaws.com/python-web-app:''v\$(expr \${BUILD_NUMBER} - 5)''"
             }
         }
         stage("push to ecr"){
